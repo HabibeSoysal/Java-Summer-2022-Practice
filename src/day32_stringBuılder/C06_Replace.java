@@ -1,4 +1,4 @@
-package day34_stringBuılder;
+package day32_stringBuılder;
 
 public class C06_Replace {
     public static void main(String[] args) {

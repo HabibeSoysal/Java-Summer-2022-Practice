@@ -1,4 +1,4 @@
-package day34_stringBuılder;
+package day32_stringBuılder;
 
 public class C07_delete {
     public static void main(String[] args) {
