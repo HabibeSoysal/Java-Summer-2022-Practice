@@ -20,5 +20,6 @@ public class C08_binarySearch {
         System.out.println(Arrays.toString(harfler));
         System.out.println(Arrays.binarySearch(harfler,arananHarf));
         System.out.println(C03_Contains.contains(harfler,arananHarf));
+
     }
 }
