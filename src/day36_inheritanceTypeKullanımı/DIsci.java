@@ -13,6 +13,7 @@ public class DIsci extends BMuhasebe{
         System.out.println("Isciler : " + (30*saatUcreti*gunlukMesai)+ " maas alir");
     }
     protected void ozelSigortaIsci(){
+
         System.out.println("Isciler %70 indirimli ozel sigorta yaptirabilir");
     }
     public static void main(String[] args) {

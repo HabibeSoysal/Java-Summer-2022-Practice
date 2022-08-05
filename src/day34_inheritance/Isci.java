@@ -26,6 +26,7 @@ public class Isci extends personel {  /*
         isci1.maas(); // Isciler minumum 15 euro saat ucreti alir
     }
     public void maas(){
+
         System.out.println("Isciler minumum 15 euro saat ucreti alir");
     }
     public void ozelSigorta(){
