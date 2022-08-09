@@ -1,4 +1,4 @@
-package day_final;
+package day40_final;
 
 final public class B extends A {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package day_final;
+package day40_final;
 
 public class A {
     protected String isim = "Cuneyt";
