@@ -1,11 +1,16 @@
 package day43_ınterfaces_Iterator;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+
 public class M04_ListIterators {
     public static void main(String[] args) {
                 /*
          ListIterator Iterator'interface'nin child interface'dir
          ama daha cok method'a sahiptir
          */
+
         List<Integer> liste= new ArrayList<>();
         liste.add(10);
         liste.add(20);
@@ -21,4 +26,4 @@ public class M04_ListIterators {
     }
 
 }
-}
+

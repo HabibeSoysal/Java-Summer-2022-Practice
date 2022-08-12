@@ -1,6 +1,6 @@
 package day42_abstractOzet;
 
-public class C01_AbstractClassOZeet {
+public class C01_AbstractClassOzet {
       /*
     Abstract Class Ozet
     1- Bir class’i abstract yapip yapmamaya bastan karar veririz.

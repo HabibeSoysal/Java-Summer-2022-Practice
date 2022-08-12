@@ -1,6 +1,6 @@
 package day43_ınterfaces_Iterator;
 
-public class C02_Childs implements I01_InterfaceBodyOlanMethod {
+public class C02_Child implements I01_InterfaceBodyOlanMethod {
     @Override
     public void motor() {
     }
@@ -28,4 +28,4 @@ public class C02_Childs implements I01_InterfaceBodyOlanMethod {
         I01_InterfaceBodyOlanMethod.direksiyon();
         C02_Child obj= new C02_Child();
         obj.teker();
-}
+}}

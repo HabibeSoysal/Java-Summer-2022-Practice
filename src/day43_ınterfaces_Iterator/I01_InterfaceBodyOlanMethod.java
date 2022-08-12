@@ -1,5 +1,8 @@
 package day43_ınterfaces_Iterator;
 
+import day42_abstractOzet.I02_Interfaces;
+import day42_abstractOzet.IO3_Interfaces;
+
 public interface I01_InterfaceBodyOlanMethod {
     void motor();
     public void yakit();
@@ -46,4 +49,5 @@ public interface I01_InterfaceBodyOlanMethod {
     public static void direksiyon(){
         System.out.println("Tum arabalarin direksiyonu vardir");
     }
-}
+
+    }
