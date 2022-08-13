@@ -16,7 +16,7 @@ Map<Integer, String> ogrenciMap=ReusableMethods.mapOluştur();
         List<String> sinifisimsoyisimList=ReusableMethods.isimSoyisimListesiOlustur(ogrenciMap);
         System.out.println("isim soyisim listesi : " + sinifisimsoyisimList);
 
-        // kac farkli brans varsa bransIsmi = branstakiOgrencisayisi seklinde yazdirin
+
     }
 
 }
