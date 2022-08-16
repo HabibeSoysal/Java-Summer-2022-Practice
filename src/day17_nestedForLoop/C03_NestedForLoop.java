@@ -9,8 +9,8 @@ public class C03_NestedForLoop {
           * * * *
           * * * *
          */
-        int yukseklik=4;
-        int boy=8;
+        int yukseklik=3;
+        int boy=4;
         for (int i = 1; i <=yukseklik ; i++) {
             for (int j = 1; j <=boy ; j++) {
                 System.out.print("* ");

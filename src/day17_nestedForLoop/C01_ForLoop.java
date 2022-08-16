@@ -11,7 +11,9 @@ public class C01_ForLoop {
         String benzersizInput="";
         String islenecekKelime=input.replaceAll("\\W",""); // EmsalEfe
         System.out.print(islenecekKelime.substring(0,1)); // E
+
         benzersizInput+=islenecekKelime.substring(0,1);  // E
+
         for (int i = 1; i <islenecekKelime.length() ; i++) {
             if (!benzersizInput.contains(islenecekKelime.substring(i,i+1))){
                 System.out.print(", "+ islenecekKelime.substring(i,i+1));
