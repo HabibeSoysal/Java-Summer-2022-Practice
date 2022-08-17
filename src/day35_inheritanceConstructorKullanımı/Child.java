@@ -13,6 +13,7 @@ public class Child extends BParent{
         Child child1 = new Child();
         child1.granpaKlupAdi = "Child1";
         child1.parentKlupAdi = "Child2";
+
         // child1 objesi icin Child cons calisir
         /*
           Java'da bir class'i kullanabilmek icin

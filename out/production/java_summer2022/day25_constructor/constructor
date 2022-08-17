@@ -1,7 +1,7 @@
 
 
 
-   C01           obj1        =     new        C01(); //c01 class ında bir obje olusturduk şuanda //obje ürettik
+   C01 obj1=new C01(); //c01 class ında bir obje olusturduk şuanda //obje ürettik
         //class adi   objenin adı     keyword       constructer (yapıcı, kurucu, bir nevi müteahhit)
 ​
 ​

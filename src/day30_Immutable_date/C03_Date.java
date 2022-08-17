@@ -7,7 +7,7 @@ public class C03_Date {
     public static void main(String[] args) {
         LocalDate tarih = LocalDate.now();
         System.out.println(tarih); // 2022-07-23
-        System.out.println(tarih.getDayOfYear()); // 204 yılın 204. günü
+        System.out.println(tarih.getDayOfYear()); // 2022 yılın 204. günü
         System.out.println(tarih.getDayOfWeek()); // SATURDAY-günleden cumartesi
         System.out.println(tarih.getMonthValue()); // aylardan 7
         System.out.println(tarih.isLeapYear()); // false--artık yıl mı değil mi

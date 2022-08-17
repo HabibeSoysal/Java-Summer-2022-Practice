@@ -14,8 +14,8 @@ public class C02_StringHavuzu {
         System.out.println(str1==str3); // false
         System.out.println(str2.equals(str4)); // true
         System.out.println(str2==str4); // false
-        System.out.println("s1-s4 " + str1.equals(str4)); // true
-        System.out.println("s1-s4 " + (str1==str4)); // true
+        System.out.println("s1-s4 :" + str1.equals(str4)); // true
+        System.out.println("s1-s4 :"+ (str1==str4)); // true
         /*
           yeni bir String olustururken
           1- esitligin saginda new keyword'u olursa java direk yeni bir obje ve ref olusturur

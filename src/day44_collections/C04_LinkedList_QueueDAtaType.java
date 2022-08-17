@@ -26,7 +26,7 @@ public class C04_LinkedList_QueueDAtaType {
         // aralarindaki fark bos liste olursa peek null doner, element exception firlatir
         ll3.offer("Ahmet");
         ll3.offer("Sefa");
-        System.out.println(ll3); // [Zeynep, Kadir, Ahmet]
+        System.out.println(ll3); // [Zeynep, Kadir, Ahmet,sefa]
         System.out.println(ll3.poll()); // Zeynep
         System.out.println(ll3); // [Kadir, Ahmet, Sefa]
         //System.out.println(ll4.remove()); // throws exception NoSuchElementException
