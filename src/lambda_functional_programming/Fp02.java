@@ -1,7 +1,9 @@
 package lambda_functional_programming;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Fp02 {
     /*
@@ -31,6 +33,16 @@ public class Fp02 {
         tekElemanlarinKareleriniYazdirFunctional(liste);
         System.out.println();
         tekElemanlarinKupleriniYazdirFunctional(liste);
+        System.out.println();
+        tekrarsızCiftElemanlarinKareToplam(liste);
+        System.out.println();
+        tekrarsızCiftElemanlarinKupunÇarpiminiYazdir(liste);
+        System.out.println();
+        getMaxEleman(liste);
+        System.out.println();
+        getMinEleman(liste);
+        getYedidenBuyukCiftMin(liste);
+        getTersSiralamaylaTekrarsizElemanlarinYarisi(liste);
 
     }
 //1) Ardışık list elementlerininin karelerini aynı
@@ -55,7 +67,7 @@ public class Fp02 {
     // satırda aralarında boşluk bırakarak yazdıran bir method oluşturun.(functıonal)
     public static void tekElemanlarinKareleriniYazdirFunctional(List<Integer> list) {
         list.stream().filter(utils::tekElemanlariSec).
-                map( utils::karesiniAl).forEach(utils::ayniSatirdaBosluklaYazdir);
+                map(utils::karesiniAl).forEach(utils::ayniSatirdaBosluklaYazdir);
 //elemanlarin degerleri degişecekse map metodunu kullanılır
     }
     //4-Ardışık tek list elementlerininin küplerini tekrarsız olarak aynı
@@ -66,11 +78,70 @@ public class Fp02 {
                 map(utils::küpleriniAl).forEach(utils::ayniSatirdaBosluklaYazdir);
 
     }
+
+    //5-tekrarsız cift elementlerininin karelerinin toplamini hesaplayan bir method oluşturun.(functıonal)
     public static void tekrarsızCiftElemanlarinKareToplam(List<Integer> list) {
         Integer toplam = list.stream().distinct().filter(utils::ciftElemanlariSec).
-               // map(utils::karesiniAl).reduce();
-       // System.out.println(toplam);
+                map(utils::karesiniAl).reduce(0, Math::addExact);//MAth class addExact toplama yapmak demek
+
+        System.out.println(toplam);
+
+        System.out.println("2.yol");
+        Integer toplam2 = list.stream().distinct().filter(utils::ciftElemanlariSec).
+                map(utils::karesiniAl).reduce(Math::addExact).get();//MAth class addExact toplama yapmak demek
+        System.out.println(toplam2);
+
+        System.out.println("3.yol");
+        Integer toplam3 = list.stream().distinct().filter(utils::ciftElemanlariSec).
+                map(utils::karesiniAl).reduce(0, Integer::sum);//Integer clasında da toplam var  toplama yapmak demek
+        System.out.println(toplam2);
+    }
+
+    //6-tekrarsız cift elementlerininin kupunun çarpimini hesaplayan bir method oluşturun.(functıonal)
+    public static void tekrarsızCiftElemanlarinKupunÇarpiminiYazdir(List<Integer> list) {
+        Integer carpim = list.stream().distinct().filter(utils::ciftElemanlariSec).
+                map(utils::küpleriniAl).reduce(1, Math::multiplyExact);//multıply carpım demek
+        System.out.println(carpim);
+
+    }  //7-list elemanlari arasınsan en büyük degeri bulan bir method oluşturun.(functıonal)
+
+    //1.yol
+    public static void getMaxEleman(List<Integer> list) {
+        Integer max = list.stream().distinct().reduce(Math::max).get();
+        System.out.println(max);
+
+    }
+//8-list elemanlari arasınsan en kücük degeri bulan bir method oluşturun.(functıonal)
+
+    public static void getMinEleman(List<Integer> list) {
+        Integer min = list.stream().distinct().reduce(Math::min).get();
+        System.out.println("min = " + min);
+
+    }  //9-list elemanlari arasınsan 7 den  büyük cift en küçük  degeri bulan bir method oluşturun.(functıonal)1.yol
+
+    public static void getYedidenBuyukCiftMin(List<Integer> list) {
+        Integer minIstenilen = list.stream().distinct().filter(utils::ciftElemanlariSec).
+                filter(t -> t > 7).reduce(Math::min).get();
+        System.out.println("minIstenilen = " + minIstenilen);
+
+    }
+//10-ters sıralama ile tekrarsız ve 5 ten büyük elemanların yarı   degerlerini(elemanı ikiye bölüp sonucunu)
+// bulan bir method oluşturun.(functıonal)2.yol
+
+    public static void getTersSiralamaylaTekrarsizElemanlarinYarisi(List<Integer> list) {
+        List<Double> sonuc = list.stream().//GErekli methodları kullanmayı saglar
+                             distinct().//tekrarlı olanları almaz
+                             filter(t -> t > 5).//kosula göre filtrleme yapar
+                             map(utils::yarisiniAl).//her bir elemanın degerini degistirmeye yarar
+                             sorted(Comparator.reverseOrder()).//sıralama yapar
+                             collect(Collectors.toList());//elemanları collectiona cevirir
+
+        System.out.println("sonuc = " + sonuc);
+    }
 
 
     }
-}
+
+
+
+
